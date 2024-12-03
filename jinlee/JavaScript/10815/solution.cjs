@@ -11,16 +11,16 @@ const input = fs
   .split("\n");
 
 const hasNumber = (cards, target) => {
-  let st = 0,
-    en = cards.length - 1;
+  let start = 0,
+    end = cards.length - 1;
 
-  while (st <= en) {
-    let mid = Math.floor((st + en) / 2);
+  while (start <= end) {
+    let mid = Math.floor((start + end) / 2);
     if (cards[mid] === target) return 1;
     else if (cards[mid] > target) {
-      en = mid - 1;
+      end = mid - 1;
     } else {
-      st = mid + 1;
+      start = mid + 1;
     }
   }
   return 0;
