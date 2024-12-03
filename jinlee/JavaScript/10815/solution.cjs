@@ -33,8 +33,7 @@ const solution = (input) => {
   const testcases = input[3].split(" ").map(Number);
 
   cards.sort((a, b) => a - b);
-  const answer = [];
-  testcases.forEach((testcase) => answer.push(hasNumber(cards, testcase)));
+  const answer = testcases.map((testcase) => hasNumber(cards, testcase));
   console.log(answer.join(" "));
 };
 
