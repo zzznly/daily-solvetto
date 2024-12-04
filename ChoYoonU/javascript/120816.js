@@ -2,12 +2,7 @@
 
 function solution(slice, n) {
 	var answer = 0;
-	let count = 1;
-	if (n % slice !== 0) {
-		answer = Math.ceil(n / slice);
-		return answer;
-	}
-	answer = n / slice;
+	answer = Math.ceil(n / slice);
 	return answer;
 }
 
