@@ -143,7 +143,6 @@ const solution = (input) => {
     const [r, c] = candidates[0];
     graph[r][c] = student;
   }
-  // console.log(graph);
   console.log(calculateSatisfaction(graph, students));
 };
 
