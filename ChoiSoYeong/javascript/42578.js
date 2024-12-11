@@ -43,13 +43,11 @@ function solution1(clothes) {
 }
 
 // 개선한 코드
-// 1. 매번 v.length를 계산하는 것은 효율적이지 못하다고 생각해, closet에 item을 넣을 때 아이템의 이름 대신 개수를 넣는다.
-// 이름은 안중요함!!
-// 2. for문대신 reduce패턴을 사용해본다.
 function solution2(clothes) {
-  var answer = 1;
-
+  // for문대신 reduce패턴을 사용해본다.
   const closet = clothes.reduce((acc, [_, kind]) => {
+    // 매번 v.length를 계산하는 것은 효율적이지 못하다고 생각해, closet에 item을 넣을 때 아이템의 이름 대신 개수를 넣는다
+    // 이름은 중요하지 않기 때문에
     acc[kind] = (acc[kind] || 0) + 1;
     return acc;
   }, {});
@@ -58,5 +56,11 @@ function solution2(clothes) {
     answer *= v + 1;
   }
 
-  return answer - 1;
+  // 위 코드처럼 answer를 선언하지 않아도 되어 관리비용을 줄일 수 있다.
+  // 단점: 가독성?
+  return (
+    Object.values(closet).reduce((acc, count) => {
+      return acc * (count + 1);
+    }, 1) - 1
+  );
 }
