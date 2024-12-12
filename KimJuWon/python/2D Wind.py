@@ -1,3 +1,5 @@
+# 코드 트리
+# 링크 : https://www.codetree.ai/missions/2/problems/The-2D-wind-blows?&utm_source=clipboard&utm_medium=text
 import sys
 
 n, m, q = tuple(map(int, sys.stdin.readline().split()))
