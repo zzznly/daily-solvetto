@@ -1,4 +1,4 @@
-package LeeHyungGeol.java.여행경로;
+package 여행경로;
 
 import java.util.*;
 

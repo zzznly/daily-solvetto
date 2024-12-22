@@ -1,1 +1,0 @@
-# miraclex000's Algorithm Solutions
