@@ -1,5 +1,3 @@
-import java.util.*;
-
 class Solution {
     public int solution(int[] stones, int k) {
         int answer = 0, left = 0, right = 200_000_000;
